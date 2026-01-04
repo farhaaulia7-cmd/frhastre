@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan | Profil</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #dc3545;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="beranda.html">Perpustakaan</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="beranda.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transaksi.html">Transaksi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="profil.html">Profil</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <button class="btn btn-outline-light btn-sm" onclick="logout()">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- ============ NAVBAR END ============ -->
+
+
+<!-- ============ PROFIL ============ -->
+<section class="py-5">
+    <div class="container">
+
+        <!-- Judul -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-danger">Profil Pengguna</h2>
+            <p class="text-muted">Informasi pengguna sistem perpustakaan</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body text-center">
+
+                        <!-- Foto Profil -->
+                        <img src="image/farha.jpg" alt="Foto Profil" class="profile-img mb-3">
+
+                        <h4 class="fw-bold mb-0">Farha Aulia Ramadani</h4>
+                        <p class="text-muted">Mahasiswa Sistem Informasi</p>
+
+                        <hr>
+
+                        <!-- Data Profil -->
+                        <div class="row text-start">
+                            <div class="col-md-6 mb-3">
+                                <strong>NIM</strong>
+                                <p class="mb-0">251011700871</p>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <strong>Email</strong>
+                                <p class="mb-0">farhaaulia@email.com</p>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <strong>Program Studi</strong>
+                                <p class="mb-0">Sistem Informasi</p>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <strong>Role</strong>
+                                <p class="mb-0">Admin Perpustakaan</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ============ PROFIL END ============ -->
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function logout() {
+        localStorage.clear();
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>
